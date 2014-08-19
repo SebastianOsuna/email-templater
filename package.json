@@ -1,0 +1,17 @@
+{
+    "name": "email-templater",
+    "author": "Sebastian Osuna <jsebastianosuna@hotmail.com>",
+    "version": "0.0.1",
+    "description": "Use this to define email templates and send emails based on your templates.",
+    "keywords": [ "email", "templates" ],
+    "dependencies": {
+        "express": "",
+        "commander": "",
+        "mustache": "",
+        "body-parser": ""
+    },
+    "main": "lib",
+    "bin": {
+        "email-templater": "./bin/email-templater"
+    }
+}
