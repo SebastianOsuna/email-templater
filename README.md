@@ -25,7 +25,7 @@ specified, it will just return the given template in the given format.
 `GET /templates/:name/render(.:format)?`: Renders the given template with the request parameters (query params). If no 
 format is specified, it returns a JSON object with all the templates available formats rendered.
 
-`POST /templates/:name(.:format)?`: Creates a new template. The server requires the `content-type` header to be 
+`POST /templates/:name`: Creates a new template. The server requires the `content-type` header to be 
  `application/json`. The template text must be submitted via a JSON object in the request body containing the content 
  for every format. If a template with the given name already exists, an error is thrown.
  
@@ -45,9 +45,11 @@ format is specified, it returns a JSON object with all the templates available f
  }
  ```
 
-`PUT /templates/:name(.:format)?`: Edits a
+`PUT /templates/:name`: Edits an existing template. Works exactly as the creation, except if the template doesn't exists 
+or one of the formats being edited doesn't exists, an error is thrown.
 
-`DELETE /templates/:name(.:format)?`
+`DELETE /templates/:name.:format`: Deletes the template with the given format. An error is thrown if the templates doesn't 
+exists in the given format.
 
 **Mailer:**
 
