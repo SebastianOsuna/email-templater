@@ -2,7 +2,7 @@
     "name": "email-templater",
     "author": "Sebastian Osuna <jsebastianosuna@hotmail.com>",
     "version": "0.0.1",
-    "description": "Use this to define email templates and send emails based on your templates.",
+    "description": "Define email templates. Send mails.",
     "keywords": [ "email", "templates" ],
     "dependencies": {
         "express": "",
@@ -10,6 +10,7 @@
         "mustache": "",
         "body-parser": ""
     },
+    "license": "MIT",
     "main": "lib",
     "bin": {
         "email-templater": "./bin/email-templater"

@@ -31,7 +31,7 @@ format is specified, it returns a JSON object with all the templates available f
  `application/json`. The template text must be submitted via a JSON object in the request body containing the content 
  for every format. If a template with the given name already exists, an error is thrown.
  
- **Example:**
+ **Request body example:**
  
  ```
  { 
