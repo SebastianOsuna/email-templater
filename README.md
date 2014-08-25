@@ -15,6 +15,8 @@ Parameters:
 
 **Templates:**
 
+Templates must be defining using [Mustache](https://github.com/janl/mustache.js).
+
 `GET /templates`: lists available templates. That is, it lists the different filenames of HTML and TXT files from the
 templates directory.
 
@@ -55,4 +57,7 @@ exists in the given format.
 
 ## Future work
 
-Rewrite to enabled usage as independent module or through an express wrapper.
+- Finish the mailing services.
+- Rewrite to enabled usage as independent module or through an express wrapper.
+- Rewrite into templating module, emailing module, and index.js wrapping both module's services.
+- Rewrite express wrapper to accept future authorization/authentication module/layer. (use apikeys?)
