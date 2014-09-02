@@ -55,9 +55,18 @@ exists in the given format.
 
 **Mailer:**
 
+## Known issues:
+ - **Error: SELF_SIGNED_CERT_IN_CHAIN**. See:
+     - http://stackoverflow.com/questions/9626990/receiving-error-error-ssl-error-self-signed-cert-in-chain-while-using-npm
+     - https://github.com/andris9/Nodemailer/issues/310
+     - http://blog.npmjs.org/post/78085451721/npms-self-signed-certificate-is-no-more
+     - Other possible causes:
+         - If using your own SMTP server, check the certificate is setup correctly.
+         - Avast! AV in Windows will block the certificates.
+
 ## Future work
 
 - Finish the mailing services.
-- Rewrite to enabled usage as independent module or through an express wrapper.
-- Rewrite into templating module, emailing module, and index.js wrapping both module's services.
-- Rewrite express wrapper to accept future authorization/authentication module/layer. (use apikeys?)
+- Accept future authorization/authentication module/layer. (use apikeys?)
+- Support attachments and embedded images
+- NPM publish (npm ignore)

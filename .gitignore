@@ -1,3 +1,5 @@
+# Configure.js generated files
+config/*.json
 # Templates folder
 templates
 # IDE

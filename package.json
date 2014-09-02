@@ -8,11 +8,17 @@
         "express": "",
         "commander": "",
         "mustache": "",
-        "body-parser": ""
+        "body-parser": "",
+        "nodemailer": "",
+        "configurejs": ""
     },
     "license": "MIT",
     "main": "lib",
     "bin": {
         "email-templater": "./bin/email-templater"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SebastianOsuna/email-templater.git"
     }
 }
