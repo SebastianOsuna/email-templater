@@ -1,4 +1,5 @@
-# email templater
+email templater
+===
 
 ## As web server
 
@@ -55,6 +56,24 @@ exists in the given format.
 
 **Mailer:**
 
+`POST /mail/:template_name`: Mails a compiled version of the given template. The mail will contain all the available formats 
+ for the template, that is HTML and/or plain text (depending on availability). If the given file doesn't exist, `404 Not 
+  Found` header is returned. The request body must have the `Content-Type: application/json` header. All fields in the 
+  following request body example are required:
+  
+```
+ { 
+   "to": "customer@domain.com", // can also be an array of recipients
+   "from": "support@mydomain.com",
+   "subject": "Hello!",
+   "data": {                 // this values are used to render the template,
+     "foo1": "bar1",         // it is your responsibility to provide the right
+     "foo2": "bar2",         // values for the mail to be send as you expect
+     ...
+   }
+ }
+```
+
 ## Known issues:
  - **Error: SELF_SIGNED_CERT_IN_CHAIN**. See:
      - http://stackoverflow.com/questions/9626990/receiving-error-error-ssl-error-self-signed-cert-in-chain-while-using-npm
@@ -66,7 +85,6 @@ exists in the given format.
 
 ## Future work
 
-- Finish the mailing services.
 - Accept future authorization/authentication module/layer. (use apikeys?)
 - Support attachments and embedded images
-- NPM publish (npm ignore)
+- NPM publish

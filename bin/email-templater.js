@@ -148,13 +148,17 @@ server.get('/templates', function (req, res) {
             from = req.body.from,
             subject = req.body.subject,
             data = req.body.data;
-        email_templater.sendMail( to, from, subject, template_name, data, function (err) {
-            if ( err ) {
-                res.status( 400 ).json( err );
-            } else {
-                res.status( 204 ).send();
-            }
-        } )
+        email_templater.templateExists( template_name, function () {
+            email_templater.sendMail( to, from, subject, template_name, data, function (err) {
+                if ( err ) {
+                    res.status( 400 ).json( err );
+                } else {
+                    res.status( 204 ).send();
+                }
+            } );
+        }, function () {
+            res.status( 404 ).send();
+        } );
     });
 
 console.log('Initializing server. Listening on port ' + port + ' ...');

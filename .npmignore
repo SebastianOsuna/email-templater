@@ -1,2 +1,6 @@
-npm
+/.git
 config/*.json
+.idea
+.gitignore
+node_modules
+templates
