@@ -1,7 +1,9 @@
 {
-    "host": "",
-    "port": 25,
-    "secure": false,
-    "username": "",
-    "password": ""
+    "smtp": {
+        "host": "",
+        "port": 25,
+        "username": "",
+        "password": ""
+    },
+    "templates_directory: ""
 }

@@ -1,3 +1,2 @@
-.git*
-templates/
-.DS_Store
+npm
+config/*.json
