@@ -148,15 +148,19 @@ server.get('/templates', function (req, res) {
             from = req.body.from,
             subject = req.body.subject,
             data = req.body.data;
+        console.log("POST /mail/"+template_name+": Sending email with parameters", req.body);
         email_templater.templateExists( template_name, function () {
             email_templater.sendMail( to, from, subject, template_name, data, function (err) {
                 if ( err ) {
+                    console.log("POST /mail/"+template_name+"(400): Something went wrong!", err);
                     res.status( 400 ).json( err );
                 } else {
+                    console.log("POST /mail/"+template_name+"(400): Mails sent!");
                     res.status( 204 ).send();
                 }
             } );
         }, function () {
+            console.log("POST /mail/"+template_name+"(404): Template doesn't exists.");
             res.status( 404 ).send();
         } );
     });
