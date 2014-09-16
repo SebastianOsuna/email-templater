@@ -3,7 +3,8 @@
         "host": "",
         "port": 25,
         "username": "",
-        "password": ""
+        "password": "",
+        "sender": ""
     },
     "templates_directory": ""
 }

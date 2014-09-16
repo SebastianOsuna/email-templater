@@ -14,6 +14,24 @@ Parameters:
 -t, --templates-directory [directory]: Filesystem template directory (default is './templates')
 ```
 
+## Config
+
+Email templater uses [configure.js](https://github.com/SebastianOsuna/configure.js) to setup it's own configuration 
+file. The configuration file `mail.json` must be placed in the `config` directory.
+
+```
+{
+    "smtp": {
+        "host": "mail.example.com",         // your mail server URL/IP
+        "port": 25,                         // connection port. default is 25
+        "username": "noreply@example.com",  // sender account
+        "password": "secret!",              // sender password
+        "sender": "My Company <noreply@example.com>"     // From field 
+    },
+    "templates_directory": ""  // No use for now
+}
+```
+
 **Templates:**
 
 Templates must be defining using [Mustache](https://github.com/janl/mustache.js).
