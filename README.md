@@ -64,7 +64,6 @@ exists in the given format.
 ```
  { 
    "to": "customer@domain.com", // can also be an array of recipients
-   "from": "support@mydomain.com",
    "subject": "Hello!",
    "data": {                 // this values are used to render the template,
      "foo1": "bar1",         // it is your responsibility to provide the right
