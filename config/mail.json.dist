@@ -1,10 +1,13 @@
 {
-    "smtp": {
+    "mailer": {
         "host": "",
         "port": 25,
-        "username": "",
-        "password": "",
-        "sender": ""
+        "service": "Gmail",
+        "secure": true,
+        "auth": {
+          "user": "",
+          "pass": ""
+        }
     },
     "templates_directory": ""
 }
