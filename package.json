@@ -10,7 +10,10 @@
         "mustache": "",
         "body-parser": "",
         "nodemailer": "",
-        "configurejs": ""
+        "configurejs": "0.0.2"
+    },
+    "scripts": {
+        "postinstall": "node node_modules/configurejs/bin/configure setup --config ./config"
     },
     "license": "MIT",
     "main": "lib",
